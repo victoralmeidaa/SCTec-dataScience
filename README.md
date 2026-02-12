@@ -23,7 +23,7 @@ Intalando virtualenv:
 pip3 install virtualenv
 ```
 
-Criando ambiente:
+Criando ambiente::
 
 ```bash
 virtualenv venv
