@@ -28,3 +28,15 @@ if idade >= 18 and carteira:
     print("Pode dirigir")
 else:
     print("Não pode dirigir")
+
+# Aula 09
+hora = 9
+humor = 'sono'
+
+if humor == 'sono' and hora < 10: # se o humor for sono e a hora for menor que 10, então cafezinho
+    print('cafezinho')
+elif humor == 'sedento' or hora < 2: # se o humor for sedento ou a hora for menor que 2, então limonada
+    print('limonada')
+else: # se nenhuma das condições anteriores for verdadeira, então água
+    print('agua')
+
