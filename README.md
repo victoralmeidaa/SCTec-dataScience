@@ -27,6 +27,8 @@ Criando ambiente::
 
 ```bash
 virtualenv venv
+ou
+python -m venv venv
 ```
 
 Ativando o ambiente:
