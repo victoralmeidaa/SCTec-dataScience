@@ -48,38 +48,51 @@ except Exception as e:
     print(f'Erro Inesperado: ', e)
 
 
-try:    # INSERT TABLE
-    valor1 = 'texto1'
-    valor2 = 'texto2'
+# try:    # INSERT TABLE
+#     valor1 = 'texto1'
+#     valor2 = 'texto2'
 
-    cur.execute('''
-        INSERT INTO name_table (coluna01, coluna02) 
-        VALUES (%s, %s)''', 
-        (valor1, valor2))
+#     cur.execute('''
+#         INSERT INTO name_table (coluna01, coluna02) 
+#         VALUES (%s, %s)''', 
+#         (valor1, valor2))
     
-    print('Registro inserido com sucesso.')
-except errors.DuplicateColumn:
-    print('Coluna já existe, Ignorando...')
+#     print('Registro inserido com sucesso.')
+# except errors.DuplicateColumn:
+#     print('Coluna já existe, Ignorando...')
 
-except Exception as e:
-    print(f'Erro ao inserir', e)
+# except Exception as e:
+#     print(f'Erro ao inserir', e)
 
 
 # UPDATE DATABASE
-novo_valor1 = 'texto1_autalizado'
-novo_valor2 = 'texto2_atualizado'
-valor_criterio = 'texto2'
+# novo_valor1 = 'texto1_autalizado'
+# novo_valor2 = 'texto2_atualizado'
+# valor_criterio = 'texto2'
 
-cur.execute(
-    'UPDATE name_table ' 
-    'SET coluna01 = %s, ' 
-    'coluna02 = %s ' 
-    'WHERE coluna02 = %s',
-    (novo_valor1, novo_valor2, valor_criterio)
-)
-print("Linhas afetadas:", cur.rowcount)
-conn.commit()
+# cur.execute(
+#     'UPDATE name_table ' 
+#     'SET coluna01 = %s, ' 
+#     'coluna02 = %s ' 
+#     'WHERE coluna02 = %s',
+#     (novo_valor1, novo_valor2, valor_criterio)
+# )
+# print("Linhas afetadas:", cur.rowcount)
+# conn.commit()
+cur.execute('SELECT * FROM name_table')
+rows = cur.fetchall()
 
+for row in rows:
+    print(row)
+
+# DELETE
+# valor_criterio = 'texto2_atualizado'
+# cur.execute('''
+#     DELETE FROM name_table
+#     WHERE coluna02 = %s
+#  ''', (valor_criterio,)
+#  )
+# conn.commit()
 
 # SELECT table
 cur.execute('SELECT * FROM name_table')
