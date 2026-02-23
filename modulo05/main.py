@@ -29,4 +29,3 @@ df = pd.DataFrame({'numero':numero, 'nome':nome, 'idade':idade})
 
 print(df.head(32))
 # buscando no site Ogol // Informacoes jogadores Paysandu 2026
-
