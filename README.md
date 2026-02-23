@@ -90,3 +90,8 @@ pop( ): a função remove um elemento da lista a partir do indice.
 numeros.pop(4)
 nomes.pop(3)
 ```
+
+Install pandas
+install pscopg2
+install seaborn
+install pymongo
